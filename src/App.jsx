@@ -16,15 +16,15 @@ function App() {
       [feedbackType]: feedback[feedbackType] + 1
     })
   };
-  // const resetFeedback = () => {
-  //   setFeedback({ good: 0, neutral: 0, bad: 0 });
-  // };
+  const resetFeedback = () => {
+    setFeedback({ good: 0, neutral: 0, bad: 0 });
+  };
 
   return (
       <div>
       <h1>Sip Happens Café</h1>
       <p>Please leave your feedback about our service by selecting one of the options below.</p>
-      <Options updateFeedback={updateFeedback}/>
+      <Options updateFeedback={updateFeedback} resetFeedback={resetFeedback} totalFeedback={totalFeedback}/>
       { totalFeedback > 0 ? <Feedback feedback={feedback}/> : <Notification/> }
       {/* <Options onFeedback={handleFeedback} onReset={resetFeedback} />
       <Feedback feedback={feedback} total={totalFeedback} positive={positiveFeedback} /> */}
