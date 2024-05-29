@@ -6,6 +6,7 @@ console.log(totalFeedback);
     <button onClick={()=>updateFeedback("neutral")}>Neutral</button>
     <button onClick={()=>updateFeedback("bad")}>Bad</button>
     {totalFeedback > 0 ? <button onClick={()=>resetFeedback()}>Reset</button>: false}
+
     </>
 )
 }
